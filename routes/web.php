@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('layouts.home');
 });
 Route::get('login', 'LoginController@showLogin')->name('show.login');
+Route::get('logout', 'LoginController@logout')->name('user.logout');
+Route::post('login', 'LoginController@login')->name('user.login');
+Route::get('/blog', 'BlogController@showBlog')->name('show.blog');
